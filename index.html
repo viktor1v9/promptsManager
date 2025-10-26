@@ -14,7 +14,34 @@
 
 <body>
     <div class="app">
-        <aside class="sidebar"></aside>
+        <button class="btn-icon open-toggle" id="btn-open">
+            <img src="assets/open.svg" alt="Abrir menu" class="icon">
+        </button>
+        <aside class="sidebar">
+            <header class="sidebar-header">
+                <img src="assets/logo.svg" alt="Logo" class="logo">
+                <button class="btn-icon" id="btn-close"> 
+                    <img src="assets/collapse.svg" alt="fechar menu" class="icon">
+                </button>
+
+            </header>
+
+            <div class="sidebar-content">
+                <div class="search-container" id="search-container">
+                    <label for="search-input" class="visually-hidden">Pesquisar prompts</label>
+                    <div class="search-input-wrapper">
+                        <!-- Inline search SVG on the left -->
+                        <img src="assets/search.svg" alt="ícone de pesquisa" class="icon search-icon">
+                        <input id="search-input" type="text" placeholder="Pesquisar prompts" class="search-input" />
+                    </div>
+
+                    <button id="btn-new-prompt" class="btn btn-new-prompt" type="button">+ Novo prompt</button>
+
+                    <!-- Divider (border-bottom belongs to the search container) -->
+                    <div class="search-divider" aria-hidden="true"></div>
+                </div>
+            </div>
+        </aside>
         
         <main class="main-content">
             <header class="main-header">
@@ -41,6 +68,7 @@
             </div>
         </main>
     </div>
+    <script src="scripts.js"></script>
 </body>
 
 </html>

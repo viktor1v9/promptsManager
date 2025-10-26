@@ -164,4 +164,120 @@ body, input, button {
 #content-wrapper.is-empty {
   font-size: 16px;
   color: var(--gray-200);
+  line-height: 32px;
+}
+
+.btn-icon {
+  background: transparent;
+  border: none;
+  padding: 0px;
+  cursor: pointer;
+}
+
+.open-toggle {
+  position: absolute;
+  top: 62px;
+  left: 62px;
+  display: none;
+}
+
+.sidebar {
+  width: 400px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  background-color: var(--gray-800);
+  border-right: 0.5px solid var(--gray-700);
+  padding: 32px;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 24px;
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sidebar search / new prompt area (matches Figma layout) */
+.search-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative; 
+  gap: 20px;
+  padding-bottom: 20px; /* space before divider */
+  /* divider is the bottom border area implemented with a dedicated element */
+}
+
+.search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border-radius: 8px;
+  padding: 8px 12px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.search-input-wrapper .search-icon {
+  color: var(--gray-100);
+  flex: 0 0 20px;
+}
+
+.search-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--white);
+  font-size: 14px;
+  line-height: 20px;
+  padding: 6px 0;
+  width: 100%;
+}
+
+.search-input::placeholder {
+  color: var(--gray-200);
+}
+
+/* New prompt button — full width and consistent with primary style */
+.btn-new-prompt {
+  width: 100%;
+  justify-content: center;
+  background: var(--accent-600);
+  border: 1px solid var(--accent-500);
+  color: var(--white);
+  height: 44px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.btn-new-prompt:hover {
+  opacity: 0.95;
+}
+
+/* Divider line below the button — thin border matching search container style */
+.search-divider {
+  height: 1px;
+  background: rgba(255,255,255,0.04);
+  margin-top: 6px;
+  width: 100%;
+}
+
+/* Utility: visually hidden label for accessibility */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; /* added line */
 }
